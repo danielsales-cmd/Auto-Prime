@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Prime | Veículos</title>
+    <link rel="stylesheet" href="veiculos.css">
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+
+                <a class="logo" href="home.html">Auto <span>Prime</span></a>
+
+                <ul>
+
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="veiculos.html">Veiculos</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contatos.html">Contatos</a></li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section id="veiculos">
+
+            <div class="titulo">
+
+                <h1>Nossos veículos</h1>
+                <p>Encontre o veículo ideal para você</p>
+
+            </div>
+
+            <div class="filtro-veiculos">
+
+                <div class="campo-filtro">
+
+                    <label for="marca">Marca</label>
+                    <select  id="marca">
+                        <option value="">Todas</option>
+                        <option value="Chevrolet">Chevrolet</option>
+                        <option value="Volkswagen">Volkswagen</option>
+                        <option value="Honda">Honda</option>
+                    </select>
+
+                </div>
+
+                <div class="campo-filtro">
+
+                    <label for="ano">Ano</label>
+                    <select  id="ano">
+                        <option value="">Todos</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                    </select>
+
+                </div>
+
+                <div class="campo-filtro">
+                    <label for="preco">Preço</label>
+                    <select id="preco">
+                        <option value="">Todos</option>
+                        <option value="70000">Até R$ 70.000</option>
+                        <option value="100000">Até R$ 100.000</option>
+                        <option value="150000">Até R$ 150.000</option>
+                    </select>
+                </div>
+
+                <button type="button">Filtrar</button>
+
+            </div>
+
+            <div class="lista-veiculos">
+
+                <article class="card-veiculo"
+                    data-marca="Chevrolet"
+                    data-ano="2022"
+                    data-preco="72990">
+
+                    <img src="img/Onix.jpg" alt="Chevrolet Onix 2022">
+
+                    <div class="info-veiculos">
+
+                        <h2>Chevrolet Onix </h2>
+                        <p>Ano: 2022</p>
+                        <p>Quilometragem: 45.000 KM</p>
+                        <p class="Preco">R$ 72.990,00 </p>
+
+                        <a href="detalhes.html?carro=onix">Ver detalhes</a>
+
+                    </div>
+
+                </article>
+
+                <article class="card-veiculo"
+                data-marca="Honda"
+                data-ano="2021"
+                data-preco="128990">
+
+                    <img src="img/Honda-Civic.jpeg" alt="Honda Civic 2021">
+
+                    <div class="info-veiculos">
+
+                        <h2>Honda Civic</h2>
+                        <p>Ano: 2021</p>
+                        <p>Quilometragem: 51.000 KM</p>
+                        <p class="Preco">R$ 128.990,00</p>
+
+                        <a href="detalhes.html?carro=civic">Ver detalhes</a>
+
+                    </div>
+
+                </article>
+
+                <article class="card-veiculo"
+                data-marca="Volkswagen"
+                data-ano="2023"
+                data-preco="119990">
+
+                    <img src="img/T-cross.jpg" alt="T-cross 2023">
+
+                    <div class="info-veiculos">
+
+                        <h2>T-cross</h2>
+                        <p>Ano: 2023</p>
+                        <p>Quilometragem: 32.000 KM</p>
+                        <p class="Preco">R$ 119.990,00</p>
+
+                        <a href="detalhes.html?carro=tcross">Ver detalhes</a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2026 Auto Prime. Todos os direitos reservados por Daniel.</p>
+    </footer>
+    <script src="veiculos.js"></script>
+</body>
+</html>

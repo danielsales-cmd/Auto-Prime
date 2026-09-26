@@ -1,0 +1,263 @@
+@charset "UTF-8";
+
+:root{
+       --cor-principal: #111111;
+    --cor-secundaria: #f5f5f5;
+    --cor-destaque: #d4af37;
+    --cor-texto: #222222;
+    --cor-texto-claro: #ffffff;
+    --cor-links: #c19b2e;
+    --cor-sub-titulo: #555;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+}
+
+header{
+    background-color: var(--cor-principal);
+    padding: 20px 40px;
+}
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#sobre, #missao, #valores, #diferenciais{
+    padding: 60px 20px;
+}
+
+#missao h2, #valores h2, #diferenciais h2{
+    margin-bottom: 25px;
+}
+
+#missao h2, #valores h2, #diferenciais h2{
+    font-size: 2rem;
+}
+
+#missao p, #diferenciais p{
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+    margin-bottom: 15px;
+}
+
+#sobre{
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+#sobre h1{
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+}
+
+#sobre p{
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    margin-bottom: 20px;
+}
+
+.nav-container{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+}
+
+.logo span{
+    color: var(--cor-destaque);
+}
+
+.cards-valores{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.card-valor{
+    background-color: var(--cor-texto-claro);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.card-valor h3{
+    color: var(--cor-destaque);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.card-valor p{
+    font-size: 1rem;
+    line-height: 1.6rem
+}
+
+.card-valor:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+nav a{
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: var(--cor-destaque);
+    transform: translateY(-5px);
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a{
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav ul li a:hover{
+    color: var(--cor-destaque);
+    transform: translateY(-5px);
+}
+
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-destaque);
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+
+
+footer{
+    background-color: var(--cor-principal);
+    color: var(--cor-texto-claro);
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+}
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        gap: 20px;
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        font-size: 0.95rem;
+    }
+
+    #sobre,
+    #missao,
+    #valores,
+    #diferenciais {
+        padding: 40px 20px;
+    }
+
+    #sobre {
+        margin: 20px auto;
+    }
+
+    #sobre h1 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+
+    #sobre p {
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
+
+    #missao h2,
+    #valores h2,
+    #diferenciais h2 {
+        font-size: 1.7rem;
+        margin-bottom: 20px;
+    }
+
+    #missao p,
+    #diferenciais p {
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
+
+    .cards-valores {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card-valor {
+        padding: 25px;
+    }
+
+    .card-valor h3 {
+        font-size: 1.3rem;
+    }
+
+    .card-valor p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
